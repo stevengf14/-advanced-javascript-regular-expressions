@@ -20,3 +20,5 @@ console.log("\n\n************************************************* EXEC - MATCH 
 
 var expression1 = /\d+/.exec('Of the year 2022');
 console.log(expression1);
+
+console.log("Until 2032", match(/\d+/));
