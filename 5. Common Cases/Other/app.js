@@ -4,11 +4,11 @@ $(function () {
     contactForm.onsubmit = function (e) {
         e.preventDefault();
 
-        console.log('¿La URL es válida?', isValidUrl());
+        console.log('Is your URL valid?', isValidUrl());
     }
 
     /**
-     * URL/Dirección web válida
+     * URL/URL valid
      */
     var isValidUrl = function () {
         var url = document.getElementById('url');
@@ -16,19 +16,19 @@ $(function () {
     }
 
     /**
-     * Contraseña segura
-     * Contraseñas con al menos una letra mayúscula.
-     * Contraseñas con al menos una letra minúscula.
-     * Contraseñas con al menos un número o caracter especial.
-     * Contraseñas con mínimo 8 caracteres.
+     * Strong password
+     * Password with at least one uppercase letter.
+     * Password with at least one lowercase letter.
+     * Password with at least one number or special character.
+     * Password with a minimum of 8 characters.
      **/
     var isValidPass = function () {
-        var pass = document.getElementById('pass');
-        return /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/.test(pass.value)
+        var password = document.getElementById('pass');
+        return /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/.test(password.value)
     }
 
     /**
-     * Teléfonos en el mundo
+     * Phone numbers codes
      * https://en.wikipedia.org/wiki/List_of_country_calling_codes
      */
     var isValidPhone = function () {
@@ -37,7 +37,7 @@ $(function () {
     }
 
     /**
-     * Tarjetas de credito
+     * Credit Cards
      */
     var isValidCreditCard = function () {
         var phone = document.getElementById('phone');
@@ -45,7 +45,7 @@ $(function () {
     }
 
     /**
-     * Código postal
+     * Postal Code
      */
     var isValidPostalCode = function () {
         var phone = document.getElementById('phone');
@@ -53,9 +53,9 @@ $(function () {
     }
 
     /**
-     * Nombres de usuario
-     * Mínimo 6 caracteres
-     * Máximo 30 caracteres
+     * User name
+     * Min 6 characters
+     * Max 30 characters
      */
     var isValidUserName = function () {
         var phone = document.getElementById('phone');
